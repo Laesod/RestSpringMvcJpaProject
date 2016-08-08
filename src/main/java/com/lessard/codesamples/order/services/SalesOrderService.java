@@ -28,8 +28,10 @@ public class SalesOrderService {
         salesOrderRepository.save(salesOrder);
     }
 
-    public SalesOrder getSalesOrder(Integer id) {
+    public SalesOrder getSalesOrder(Long id) {
+
         SalesOrder salesOrder = salesOrderRepository.findByPrimaryKey(id);
+
         return salesOrder;
     }
 
@@ -41,7 +43,7 @@ public class SalesOrderService {
     }
 
 
-    public void delete(Integer id) {
+    public void delete(Long id) {
 
         salesOrderRepository.delete(id);
 
